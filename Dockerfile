@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM vincentliao/jupyter_notebook_env
 MAINTAINER vincentliao<vincentliao@gmail.com>
 
 RUN apk update \
@@ -10,6 +10,7 @@ RUN apk update \
 RUN pip3 install --upgrade pygit2 pygount
 RUN pip3 install --upgrade ipython 
 RUN pip3 install --upgrade sqlalchemy
+
 
 WORKDIR /workspace
 ENTRYPOINT ["ipython3"]
