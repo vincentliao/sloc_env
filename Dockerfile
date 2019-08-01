@@ -10,7 +10,7 @@ RUN apk update \
 RUN pip3 install --upgrade pygit2 pygount
 RUN pip3 install --upgrade ipython 
 RUN pip3 install --upgrade sqlalchemy
-
+RUN pip3 install --upgrade click
 
 WORKDIR /workspace
 ENTRYPOINT ["ipython3"]
